@@ -5,7 +5,7 @@ const router = express.Router();
 
 const controllers = new ControllerExercicio()
 
-router.post("/somar", controllers.Somar);
+router.post("/api/somar", controllers.Somar);
 router.post("/api/subtrair", controllers.Subtrair);
 router.post("/api/dividir", controllers.Multiplicar);
 router.post("/api/multiplicar", controllers.Dividir);
