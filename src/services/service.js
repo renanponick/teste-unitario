@@ -30,4 +30,4 @@ class ServicoExercicio {
 
 }
 
-module.exports = ServicoExercicio;
+module.exports = ServicoExercicio; //exporta a classe
