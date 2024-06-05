@@ -15,6 +15,9 @@ class ServicoExercicio {
     }
 
     Multiplicar(num1, num2){
+      if (isNaN(num1) || isNaN(num2)) {
+        throw new Error('Não dá para multiplicar com valores inválidos!');
+      } 
       return num1 * num2;
     }
 
