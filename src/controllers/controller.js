@@ -12,7 +12,7 @@ class ControllerExercicio {
         
         res.status(200).json({ result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao somar"});
+        res.status(500).json({ message: "Não dá para somar com valores inválidos!"});
       }
     }
 
@@ -23,7 +23,7 @@ class ControllerExercicio {
 
         const result = servico.Subtrair(num1, num2)
         
-        res.status(200).json({ result});
+        res.status(200).json({ result });
       } catch (error) {
         res.status(500).json({ message: "Erro ao Subtrair"});
       }

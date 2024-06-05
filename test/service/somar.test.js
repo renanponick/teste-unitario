@@ -15,7 +15,7 @@ describe('Teste função somar', () => {
         expect(resultado).toBe(1)
     })
 
-    it('CT03 - Deve somar -12 + 13 e o resultado deverá ser -1', () => {
+    it('CT03 - Deve somar 12 + -13 e o resultado deverá ser -1', () => {
         const resultado = servico.Somar(12, -13) //fica em espera até o momento de execução
         // expect(resultado).toThrowError('Não dá para somar letras')
         expect(resultado).toBe(-1)
