@@ -25,7 +25,7 @@ class ControllerExercicio {
         
         res.status(200).json({ result});
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Subtrair"});
+        res.status(500).json({ message: "Erro ao subtrair"});
       }
     }
 
@@ -38,7 +38,7 @@ class ControllerExercicio {
         
         res.status(200).json({ result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Dividir"});
+        res.status(500).json({ message: "Erro ao dividir"});
       }
     }
 
@@ -51,7 +51,7 @@ class ControllerExercicio {
         
         res.status(200).json({ result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Multiplicar"});
+        res.status(500).json({ message: "Erro ao multiplicar"});
       }
     }
 

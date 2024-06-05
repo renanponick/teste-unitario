@@ -1,3 +1,2 @@
 # teste-unitario
-Contém uma api em node para criação de teste unitário.
-
+Contém uma api em node testes unitários.
