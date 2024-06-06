@@ -25,7 +25,7 @@ class ControllerExercicio {
         
         res.status(200).json({ result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Subtrair"});
+        res.status(500).json({ message: "Não dá para subtrair com valores inválidos!"});
       }
     }
 
@@ -38,7 +38,7 @@ class ControllerExercicio {
         
         res.status(200).json({ result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Dividir"});
+        res.status(500).json({ message: "Não dá para dividir com valores inválidos!"});
       }
     }
 
@@ -51,7 +51,7 @@ class ControllerExercicio {
         
         res.status(200).json({ result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Multiplicar"});
+        res.status(500).json({ message: "Não dá para multiplicar com valores inválidos!"});
       }
     }
 

@@ -23,13 +23,13 @@ describe('Teste função divisão', () => {
         expect(resultado).toBe(0)
     })
 
-    it('CT24 - Deve dividir a / 13 e o resultado deverá ser - Não dá para subtrair com valores inválidos!', () => {
+    it('CT23 - Deve dividir a / 13 e o resultado deverá ser - Não dá para subtrair com valores inválidos!', () => {
         const resultado = () => servico.Dividir('a', 13) //fica em espera até o momento de execução
         expect(resultado).toThrowError('Não dá para dividir com valores inválidos!')
         // expect(resultado).toBe(13)
     })
 
-    it('CT25 - Deve dividir 12 / a e o resultado deverá ser - Não dá para subtrair com valores inválidos!', () => {
+    it('CT24 - Deve dividir 12 / a e o resultado deverá ser - Não dá para subtrair com valores inválidos!', () => {
         const resultado = () => servico.Dividir(12, 'a') //fica em espera até o momento de execução
         expect(resultado).toThrowError('Não dá para dividir com valores inválidos!')
         // expect(resultado).toBe(13)

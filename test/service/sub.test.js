@@ -14,7 +14,7 @@ describe('Teste função subtrair', () => {
         expect(resultado).toBe(-50)
     })
 
-    it('CT11 - Deve subtrair -100 - 50 e o resultado deverá ser -50', () => {
+    it('CT11 - Deve subtrair -100 - 50 e o resultado deverá ser -150', () => {
         const resultado = servico.Subtrair(-100, 50) //fica em espera até o momento de execução
         // expect(resultado).toThrowError('Não dá para somar letras')
         expect(resultado).toBe(-150)

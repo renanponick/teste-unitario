@@ -49,7 +49,7 @@ describe('Teste função multiplicação', () => {
         expect(resultado).toThrowError('Não dá para multiplicar com valores inválidos!')
     })
 
-    it('CT34 - Deve multiplicar 100 *  e o resultado deverá ser - Não dá para multiplicar com valores inválidos!', () => {
+    it('CT35 - Deve multiplicar 100 *  e o resultado deverá ser - Não dá para multiplicar com valores inválidos!', () => {
         const resultado = () => servico.Multiplicar(100)
         // expect(resultado).toBe(0)
         expect(resultado).toThrowError('Não dá para multiplicar com valores inválidos!')
