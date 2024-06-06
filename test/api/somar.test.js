@@ -1,4 +1,4 @@
-const app = require('../../index');
+const app = require('../../src/app')
 const request = require('supertest')
 
 describe('Teste de API para ExercicioController - Função Somar', () => {

@@ -1,4 +1,4 @@
-const app = require('../../index');
+const app = require('../../src/app')
 const request = require('supertest')
 
 describe('Teste de API para ExercicioController - Função Dividir', () => {
@@ -24,6 +24,24 @@ describe('Teste de API para ExercicioController - Função Dividir', () => {
         const response = await request(app)
             .post('/api/dividir')
             .send({ num1: 'a', num2: -2 });
+    
+        expect(response.statusCode).toBe(500);
+        expect(response.body).toEqual({ message: "Erro ao dividir" });
+    })
+
+    it('POST /dividir com a divisão de um valor boolean e um número deve retornar um erro', async () => {
+        const response = await request(app)
+            .post('/api/dividir')
+            .send({ num1: 5, num2: false });
+    
+        expect(response.statusCode).toBe(500);
+        expect(response.body).toEqual({ message: "Erro ao dividir" });
+    })
+
+    it('POST /dividir com a divisão com os dois números zerados deve retornar 0', async () => {
+        const response = await request(app)
+            .post('/api/dividir')
+            .send({ num1: 0, num2: 0 });
     
         expect(response.statusCode).toBe(500);
         expect(response.body).toEqual({ message: "Erro ao dividir" });
