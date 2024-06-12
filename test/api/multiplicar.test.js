@@ -28,4 +28,13 @@ describe('Teste de API para ExercicioController - Função multiplicar', () => {
         expect(response.statusCode).toBe(500);
         expect(response.body).toEqual({ message: "Erro ao multiplicar" });
     })
+
+    it('POST /multiplicar com a multiplicação de um número decimal e um número inteiro positivo', async () => {
+        const response = await request(app)
+            .post('/api/multiplicar')
+            .send({ num1: 2, num2: 1.6 });
+    
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual({ result: 3.2 });
+    })
 })

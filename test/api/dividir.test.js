@@ -43,7 +43,16 @@ describe('Teste de API para ExercicioController - Função Dividir', () => {
             .post('/api/dividir')
             .send({ num1: 0, num2: 0 });
     
-        expect(response.statusCode).toBe(500);
-        expect(response.body).toEqual({ message: "Erro ao dividir" });
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual({ result: 0 });
+    })
+
+    it('POST /dividir com a divisão com um numero decimal e um número inteiro positivo deve retornar a divisão', async () => {
+        const response = await request(app)
+            .post('/api/dividir')
+            .send({ num1: 10.8, num2: 5 });
+    
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual({ result: 2.16 });
     })
 })

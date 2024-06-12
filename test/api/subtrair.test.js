@@ -28,4 +28,13 @@ describe('Teste de API para ExercicioController - Função Subtrair', () => {
         expect(response.statusCode).toBe(500);
         expect(response.body).toEqual({ message: "Erro ao subtrair" });
     })
+
+    it('POST /subtrair com a subtração um número inteiro positivo e um número decimal deve retornar a subtração', async () => {
+        const response = await request(app)
+            .post('/api/subtrair')
+            .send({ num1: 5, num2: 1.5 });
+    
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual({ result: 3.5 });
+    })
 })

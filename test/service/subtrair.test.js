@@ -24,4 +24,10 @@ describe('Testando função subtrair', () => {
 
         expect(result).toBe(-4);
     });
+
+    it('CT04 - Subtrair um número inteiro positivo e um número decimal (5-1.5)', () => {
+        const result = servicoExercicio.Subtrair(5, 1.5);
+
+        expect(result).toBe(3.5);
+    });
 });
